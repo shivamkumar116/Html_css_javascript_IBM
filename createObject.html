@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function myMethod(x, y) {
+        console.log("myMethod is invoked with " + x + " and " + y);
+      }
+
+      var personObj = new Object();
+      personObj.name = "shivam";
+      personObj.age = 50;
+
+      document.write(personObj.name + " is " + personObj.age + " years old");
+
+      // Add a method
+      personObj.method1 = myMethod;
+      personObj.method2 = myMethod();
+      console.dir(personObj.method1); // function object
+      console.dir(personObj.method2); // undefined
+
+      // Inspect the object
+      console.dir(personObj);
+
+      // Invoke method with various number of arguments
+      personObj.method1();
+      personObj.method1("Apple");
+      personObj.method1("Apple", "Orange");
+      personObj.method1(personObj.firstname, personObj.lastname);
+    </script>
+  </head>
+  <body></body>
+</html>
