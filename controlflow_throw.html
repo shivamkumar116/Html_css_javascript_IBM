@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Throw in javascript</title>
+
+    <script>
+      var number = prompt("enter a number between 1 to 10 : ");
+      try {
+        if (number <= 0) {
+          throw "Err1";
+        } else if (number > 10) {
+          throw "Err2";
+        } else if (isNaN(number)) {
+          throw "Err3";
+        } else {
+          document.write("Entered number is " + number);
+        }
+      } catch (err) {
+        if (err == "Err1") {
+          document.write("number cannot be negative");
+        }
+        if (err == "Err2") {
+          document.write("number cannot be greater than 10");
+        }
+        if (err == "Err3") {
+          document.write("You have not entered a number");
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
