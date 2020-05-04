@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      var myObj = {
+        name: "shivam",
+        age: 23,
+        mood: function () {
+          console.log("Really happy");
+        },
+        hobby: callHobby,
+      };
+
+      //adding property to myObj
+
+      myObj.salary = 20000;
+
+      console.dir(myObj);
+
+      //calling myobj
+      console.log(myObj.name);
+      console.log(myObj.age);
+      myObj.mood();
+      myObj.hobby("Coding");
+      console.log(myObj.salary);
+
+      function callHobby(hobby) {
+        console.log(hobby);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
